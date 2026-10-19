@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 import { getAssessmentForLesson } from '../config/content.js';
 import { GAME_HEIGHT, GAME_WIDTH } from '../config/gameConfig.js';
 import { markSceneReady, setTestState } from '../systems/testSeam.js';
-import { closeOpenModal, createBackArrow, createPixelButton, showModal, textStyle } from '../ui/ui.js';
+import { closeOpenModal, coverImage, createBackArrow, createPixelButton, showModal, textStyle, titleStyle } from '../ui/ui.js';
 
 const CARD_WIDTH = 820;
 const CARD_HEIGHT = 380;
@@ -43,7 +43,8 @@ export default class AssessmentScene extends Phaser.Scene {
   }
 
   drawBackground() {
-    this.add.rectangle(0, 0, GAME_WIDTH, GAME_HEIGHT, 0x172826, 1).setOrigin(0);
+    if (this.textures.exists('assessment-backdrop')) coverImage(this, 'assessment-backdrop');
+    else this.add.rectangle(0, 0, GAME_WIDTH, GAME_HEIGHT, 0x172826, 1).setOrigin(0);
     this.add.rectangle(0, 0, GAME_WIDTH, 134, 0x3e3a36, 0.98).setOrigin(0);
     this.add.rectangle(0, 134, GAME_WIDTH, 7, 0xffd76a, 1).setOrigin(0);
 
@@ -62,7 +63,7 @@ export default class AssessmentScene extends Phaser.Scene {
     back.setDepth(20);
 
     const label = this.assessment.type === 'summative' ? 'SUMMATIVE' : 'FORMATIVE';
-    this.titleText = this.add.text(150, 42, this.assessment.title, textStyle(36, '#fff2c9', 'left'));
+    this.titleText = this.add.text(150, 42, this.assessment.title, titleStyle(36, '#fff2c9', 'left'));
     this.titleText.setOrigin(0, 0.5);
     this.titleText.setShadow(3, 3, '#000000', 0, false, true);
     this.subtitleText = this.add.text(150, 82, this.assessment.subtitle, textStyle(22, '#66e5ff', 'left'));

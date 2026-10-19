@@ -1,4 +1,7 @@
 import Phaser from 'phaser';
+import { closeMinigameHelp } from '../ui/minigameHelp.js';
+import { createMinigameNavigation } from '../ui/minigameNavigation.js';
+import { createMixtureIcon } from '../ui/assetIcons.js';
 import { mixMatchMixturesGame } from '../config/content.js';
 import { GAME_WIDTH } from '../config/gameConfig.js';
 import { getPostGameAssessmentLabel, startPostGameAssessment } from '../systems/assessmentFlow.js';
@@ -8,7 +11,6 @@ import {
   createMinigameHud,
   createSparkles as createSharedSparkles,
   drawMinigameBackdrop,
-  drawMixtureIcon,
 } from '../ui/minigameUi.js';
 import { closeOpenModal, showModal, textStyle } from '../ui/ui.js';
 
@@ -52,7 +54,7 @@ export default class MixMatchScene extends Phaser.Scene {
   }
 
   update(_time, delta) {
-    if (this.result) {
+    if (this.result || this.currentModal) {
       return;
     }
 
@@ -71,24 +73,24 @@ export default class MixMatchScene extends Phaser.Scene {
   }
 
   drawLabBackground() {
-    drawMinigameBackdrop(this);
+    drawMinigameBackdrop(this, 'mix-match-backdrop');
   }
 
   createHud() {
+    createMinigameNavigation(this);
     this.hud = createMinigameHud(this, {
       title: mixMatchMixturesGame.title,
       topic: mixMatchMixturesGame.topic,
-      progressLabel: 'POWER',
+      progressLabel: 'MATCHED SETS',
       progressValue: this.matchedSetCount,
       progressMax: mixMatchMixturesGame.sets.length,
       score: this.score,
       time: this.timeRemaining,
-      onBack: () => this.returnToQuarter(),
     });
 
     this.feedback = createBottomFeedback(this, {
-      primary: 'FLIP 3 CARDS: TERM + PICTURE + DESCRIPTION',
-      secondary: 'MATCH THE MIXTURE CLUES BEFORE TIME RUNS OUT.',
+      primary: 'MATCH THREE CLUES',
+      secondary: 'Choose a term, a picture, and a description.',
     });
     this.messageText = this.feedback.primaryText;
     this.clueText = this.feedback.secondaryText;
@@ -228,8 +230,7 @@ export default class MixMatchScene extends Phaser.Scene {
     card.content.add(typeLabel);
 
     if (card.type === 'picture') {
-      const icon = this.add.graphics();
-      this.drawPictureIcon(icon, card.icon);
+      const icon = createMixtureIcon(this, card.icon, { y: -4, width: 80, height: 72 });
       const label = this.add.text(0, 35, card.label.toUpperCase(), textStyle(18, '#2f2a2a'));
       label.setOrigin(0.5);
       label.setWordWrapWidth(CARD_WIDTH - 22);
@@ -250,12 +251,8 @@ export default class MixMatchScene extends Phaser.Scene {
     card.content.add(accent);
   }
 
-  drawPictureIcon(graphics, icon) {
-    drawMixtureIcon(graphics, icon);
-  }
-
   flipCard(card) {
-    if (this.result || this.isResolving || card.flipped || card.matched || this.selectedCards.length >= 3) {
+    if (this.result || this.currentModal || this.isResolving || card.flipped || card.matched || this.selectedCards.length >= 3) {
       return;
     }
 
@@ -454,9 +451,14 @@ export default class MixMatchScene extends Phaser.Scene {
   }
 
   goBackOrCloseModal() {
+    if (this.minigameHelpOpen) {
+      closeMinigameHelp(this);
+      return;
+    }
     if (this.currentModal) {
       closeOpenModal(this);
-      this.returnToQuarter();
+      if (this.result) this.returnToQuarter();
+      else this.updateTestState();
       return;
     }
 
@@ -495,6 +497,9 @@ export default class MixMatchScene extends Phaser.Scene {
 
   buildTestState() {
     return {
+      minigameHelpOpen: Boolean(this.minigameHelpOpen),
+      minigameHelpButton: this.helpButtonMeta,
+      minigameControls: this.navigationMeta,
       selectedIsland: this.islandId,
       selectedQuarter: this.quarterId,
       selectedMajor: this.majorId,

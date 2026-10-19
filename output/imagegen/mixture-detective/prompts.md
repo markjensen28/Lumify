@@ -1,0 +1,9 @@
+# Mixture Detective generated assets
+
+Generated with the built-in image_gen tool. The existing supply-guide scientist and mixture sprites are reused.
+
+## sample-stage.png
+Use case: illustration-story. Asset type: reusable empty sample display background for LUMIFY Mixture Compare Cards, a 2D fantasy pixel-art educational game. Create ONE portrait 4:3 width-to-height laboratory display stage: warm wooden laboratory bench across the bottom third, a large blue-sky window with distant green treetops centered behind it, dark walnut shelves with a few small colorful books and glass flasks along left and right edges. Front-facing composition, empty uncluttered central bench surface reserved for a separately rendered mixture sprite, no food, no drink, no central object. Authentic polished 32-bit-inspired fantasy pixel art, crisp square pixels, deliberate pixel clusters, clean dark outlines, limited color ramps, consistent approximately 320x240 native art rendered at integer scale, warm amber wood and cyan daylight. This will be displayed inside an interactive sample card. No UI, no frame, no characters, no robot, no writing, no labels, no watermark. Opaque image, edge-to-edge art.
+
+## detective-badge.png
+Use case: illustration-story. Asset type: one isolated transparent detective badge sprite for LUMIFY, a fantasy 2D pixel-art educational game. A gold bronze octagonal achievement badge with a small magnifying glass centered on a dark navy enamel field, cyan-blue glass lens, golden handle pointing lower right. Exactly one badge, centered, strong readable silhouette. Authentic handcrafted 32-bit-inspired fantasy pixel art with crisp square pixels, clean dark outlines, deliberate clusters, limited color ramps, approximately 64x64 native sprite at integer enlargement. No text, no labels, no background, no environment, no characters, no robot, no watermark. Fully transparent PNG with genuine alpha transparency outside the sprite.

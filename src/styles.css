@@ -11,7 +11,7 @@ body {
   display: grid;
   place-items: center;
   min-height: 100vh;
-  font-family: "Pixelify Sans", monospace;
+  font-family: "Lower Pixel", monospace;
 }
 
 #game-container {
@@ -22,3 +22,19 @@ body {
 canvas {
   image-rendering: pixelated;
 }
+@font-face {
+  font-family: "ArcadeClassic";
+  src: url('/assets/fonts/arcadeclassic/ARCADECLASSIC.TTF') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lower Pixel";
+  src: url('/assets/fonts/lower-pixel/LowresPixel-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+

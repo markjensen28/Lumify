@@ -1,0 +1,137 @@
+
+=== PDF PAGE 1 ===
+🎮  “Mix  Match  Memory  Quest”  
+This  is  a  3-card  matching  memory  game  where  players  must  form  a  complete  set :  
+✅  1  Term  +  1  Picture  +  1  Description  =  1  Correct  Match  Set  
+Example  of  a  correct  set:  
+●  Uniform  Mixture  (term)  ●  Salt  Water  (picture)  ●  “Looks  the  same  throughout”  (description)  
+ 
+🧠  GAME  LOOP  (Step-by-Step  Gameplay  
+Flow)
+ 
+1.  Start  Phase  
+●  Player  enters  the  pixel  lab  room  ●  Grid  of  face-down  cards  appears  (e.g.,  12–18  cards)  ●  Timer  starts  (e.g.,  90  seconds)  
+ 
+2.  Player  Action  Loop  
+Player  can  only  flip  3  cards  at  a  time  
+Step  1:  Flip  Cards  
+●  Player  taps  a  card  →  it  flips  (animation)  ●  Player  flips  up  to  3  cards  
+ 
+Step  2:  System  Check  (Core  Logic)  
+After  3  cards  are  flipped:  
+👉  The  system  checks:  
+
+=== PDF PAGE 2 ===
+IF  (1  Term  +  1  Picture  +  1  Description  AND  all  belong  to  same  type)     →  CORRECT  MATCH  ELSE     →  WRONG  MATCH   
+3.  Feedback  Phase  
+✅  If  Correct:  
+●  Cards  glow  +  sparkle  ✨  ●  Cards  stay  revealed  (locked)  ●  Score  increases  (+10  or  +20)  ●  “Science  Clue”  pops  up:  
+ 
+ 
+ 
+“Uniform
+ 
+mixtures
+ 
+look
+ 
+the
+ 
+same
+ 
+throughout.”
+ 
+ 
+ ●  Lab  background  lights  up  (progress  feedback)  
+ 
+❌  If  Wrong:  
+●  Cards  shake  ❌  ●  Flip  back  after  1–2  seconds  ●  Small  hint  appears  (optional):  
+ 
+ 
+ 
+“Check
+ 
+the
+ 
+appearance
+ 
+carefully!”
+ 
+ 
+ 
+ 
+4.  Progression  System  
+●  Each  correct  set  =  1  power  bar  filled  ●  When  bar  fills:  
+ 
+→
+ 
+New
+ 
+set
+ 
+unlocks
+ 
+OR
+ 
+level
+ 
+completes
+ 
+ 
+5.  Win  Condition  
+
+=== PDF PAGE 3 ===
+Player  wins  when:  
+●  All  sets  are  matched  before  time  runs  out  
+ 
+6.  Lose  Condition  
+Player  loses  when:  
+●  Timer  reaches  0  and  sets  are  incomplete  
+ 
+🧩  CARD  TYPES  (Game  Data  Structure)  
+You  will  have  3  categories  of  cards :  
+1.  Term  Cards  
+●  Uniform  Mixture  ●  Non-uniform  Mixture  
+ 
+2.  Picture  Cards  
+●  Orange  Juice  ●  Salt  Water  ●  Sand  and  Water  ●  Fruit  Salad  
+ 
+3.  Description  Cards  
+●  “Looks  the  same  throughout”  ●  “Components  can  be  seen  separately”  
+ 
+
+=== PDF PAGE 4 ===
+🔁  MATCHING  LOGIC  (Important  for  
+system
+ 
+design)
+ 
+Each  card  should  have  a  hidden  ID  or  tag :  
+Example:  
+Set  ID:  001  (Uniform)  -  Term:  Uniform  Mixture  -  Picture:  Salt  Water  -  Description:  Looks  the  same  throughout  
+Game  checks:  
+IF  all  flipped  cards  have  SAME  Set  ID  →  Correct   
+🎯  SCORING  SYSTEM  
+Action  Points  
+Correct  match  +20  
+Fast  match  bonus  
++5  
+Wrong  match  0  
+Finish  early  +50   
+⚡  CORE  GAME  MECHANICS  SUMMARY  
+●  Flip  cards  (memory  mechanic)  ●  Match  3  related  items  ●  Time  pressure  ●  Immediate  feedback  (visual  +  text)  ●  Progressive  unlocking  ●  Reinforcement  via  clues  
+
+=== PDF PAGE 5 ===
+ 
+🎮  PLAYER  EXPERIENCE  FLOW  
+1.  Sees  grid  of  mystery  cards  2.  Flips  cards  →  curiosity  3.  Thinks:  “Do  these  belong  together?”  4.  Gets  feedback  →  learns  concept  5.  Repeats  →  reinforces  memory  6.  Wins  →  feels  mastery  
+ 
+🧪  WHY  THIS  WORKS  (For  your  defense)  
+This  mechanic  supports:  
+✔  Remembering  
+●  recalling  terms  and  definitions  
+✔  Understanding  
+●  connecting:  ○  appearance  ○  example  ○  concept  
+✔  Cognitive  Reinforcement  
+●  repetition  through  gameplay  ●  immediate  feedback  loop  ●  visual  +  textual  learning  
+ 
