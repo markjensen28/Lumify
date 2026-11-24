@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { startFromMenu, exitWorld } from './helpers/intro.js';
+import { startFromMenu, exitWorld, selectIsland } from './helpers/intro.js';
 
 async function ready(page, scene, timeout = 30000) {
   await page.waitForFunction((key) => window.__TEST__?.ready && window.__TEST__.sceneKey === key, scene, { timeout });
@@ -18,11 +18,12 @@ test('cloud transition reveals the world and blocks selection until complete', a
   await ready(page, 'MenuScene');
   await page.evaluate(() => window.__TEST__.commands.playCloudTransition());
   await page.waitForFunction(() => window.__TEST__?.cloudTransition === 'playing');
-  await clickGame(page, 200, 515);
-  await expect.poll(() => page.evaluate(() => window.__TEST__.selectedIsland)).toBeNull();
+  await clickGame(page, 640, 332);
+  await expect.poll(() => page.evaluate(() => window.__TEST__.sceneKey)).toBe('CloudTransitionScene');
   await ready(page, 'IslandSelectScene');
-  await clickGame(page, 263, 143);
-  await expect.poll(() => page.evaluate(() => window.__TEST__.lockedFeedback)).toBe('unknown');
+  await selectIsland(page, 'hibla-archipelago');
+  await clickGame(page, 640, 332);
+  await expect.poll(() => page.evaluate(() => window.__TEST__.lockedFeedback)).toBe('hibla-archipelago');
   await exitWorld(page);
   await page.evaluate(() => window.__TEST__.commands.playCloudTransition());
   await page.waitForFunction(() => window.__TEST__?.cloudTransition === 'playing');
@@ -36,8 +37,9 @@ test('a failed reusable cloud video still opens the world', async ({ page }) => 
   await ready(page, 'MenuScene');
   await page.evaluate(() => window.__TEST__.commands.playCloudTransition());
   await ready(page, 'IslandSelectScene');
-  await clickGame(page, 200, 515);
-  await expect.poll(() => page.evaluate(() => window.__TEST__.selectedIsland)).toBe('vulcan-caverns');
+  await expect.poll(() => page.evaluate(() => window.__TEST__.selectedIsland)).toBe('grand-library');
+  await clickGame(page, 640, 332);
+  await ready(page, 'IslandMapScene');
 });
 
 test('world selections keep working after returning from Vulcan', async ({ page }) => {
@@ -49,14 +51,15 @@ test('world selections keep working after returning from Vulcan', async ({ page 
   await startFromMenu(page);
 
   for (let visit = 0; visit < 2; visit += 1) {
-    await clickGame(page, 200, 515);
+    await selectIsland(page, 'vulcan-caverns');
     await expect.poll(() => page.evaluate(() => window.__TEST__.selectedIsland)).toBe('vulcan-caverns');
-    await clickGame(page, 200, 515);
+    await clickGame(page, 640, 332);
     await ready(page, 'IslandMapScene');
     await clickGame(page, 64, 62);
     await ready(page, 'IslandSelectScene', 5000);
-    await clickGame(page, 263, 143);
-    await expect.poll(() => page.evaluate(() => window.__TEST__.lockedFeedback)).toBe('unknown');
+    await selectIsland(page, 'hibla-archipelago');
+    await clickGame(page, 640, 332);
+    await expect.poll(() => page.evaluate(() => window.__TEST__.lockedFeedback)).toBe('hibla-archipelago');
   }
 
   await exitWorld(page);

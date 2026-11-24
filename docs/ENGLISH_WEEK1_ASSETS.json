@@ -1,0 +1,37 @@
+﻿{
+  "method": "Built-in image_gen",
+  "styleReference": "public/assets/islands/reading-island.png",
+  "assets": [
+    {
+      "path": "public/assets/english-week1/studio-backdrop.png",
+      "prompt": "Create ONE 16:9 landscape game background for a Grade 6 English learning minigame. Scene: a cozy timber sound-recording studio inside Reading Island's giant book-shaped library cottage, open arched window on the LEFT overlooking a flowering garden, a small bee above flowers, tiny water eaves and a bell outside, recording desk with an open manuscript and modest brass acoustic horn. RIGHT TWO THIRDS is a quiet warm dark timber wall and uncluttered desk surface, no large objects there. Strict style: same restrained retro pixel art as supplied Reading Island sprite, visible pixel clusters, muted earthy moss greens, warm cream, walnut brown, calm sage blue. Warm upper-left light, readable simple forms, charming handcrafted old 16-bit look, no glossy painting or 3D. Composition: visual story concentrated in LEFT THIRD; right two thirds intentionally quiet to sit behind a large separately rendered activity interface. Full opaque canvas, no characters, no legible text, no letters, no numbers, no labels, no buttons or UI. Entire scene is on or inside Reading Island, connected to books, language and learning."
+    },
+    {
+      "path": "public/assets/english-week1/airship-backdrop.png",
+      "prompt": "Create ONE 16:9 landscape game background for a Grade 6 English learning minigame. Scene: a whimsical small library airship dock floating above sage clouds, three blank cream sails on a timber book-carrying gondola on the LEFT, ropes, a tiny bookshelf, warm parchment flags. RIGHT TWO THIRDS is a quiet desaturated sage sky with sparse small clouds, no large objects there. Strict style: same restrained retro pixel art as supplied Reading Island sprite, visible pixel clusters, muted earthy moss greens, warm cream, walnut brown, calm sage blue. Warm upper-left light, readable simple forms, charming handcrafted old 16-bit look, no glossy painting or 3D. Composition: visual story concentrated in LEFT THIRD; right two thirds intentionally quiet to sit behind a large separately rendered activity interface. Full opaque canvas, no characters, no legible text, no letters, no numbers, no labels, no buttons or UI. Entire scene is on or inside Reading Island, connected to books, language and learning."
+    },
+    {
+      "path": "public/assets/english-week1/cavern-backdrop.png",
+      "prompt": "Create ONE 16:9 landscape game background for a Grade 6 English learning minigame. Scene: an enchanted echo grotto under a giant library tree on the LEFT, mossy stone arch, small still pool, three hanging warm golden lanterns and subtle blue mineral reflections, tree roots and book alcove. RIGHT TWO THIRDS is quiet dim desaturated teal stone, uncluttered, no prominent objects there. Strict style: same restrained retro pixel art as supplied Reading Island sprite, visible pixel clusters, muted earthy moss greens, warm cream, walnut brown, calm sage blue. Warm upper-left light, readable simple forms, charming handcrafted old 16-bit look, no glossy painting or 3D. Composition: visual story concentrated in LEFT THIRD; right two thirds intentionally quiet to sit behind a large separately rendered activity interface. Full opaque canvas, no characters, no legible text, no letters, no numbers, no labels, no buttons or UI. Entire scene is on or inside Reading Island, connected to books, language and learning."
+    },
+    {
+      "path": "public/assets/english-week1/threadworks-backdrop.png",
+      "prompt": "Create ONE 16:9 landscape game background for a Grade 6 English learning game. bookbinding workshop inside a giant book-shaped library cottage on the LEFT, an open blank cream book on a low wooden binding press, three spools of muted teal/gold/burgundy thread, needles safely in a cushion, book shelves and a leafy arched window, desk. RIGHT TWO THIRDS is quiet dark walnut wall and uncluttered cream desk for a separate activity interface. Strict style: match supplied Reading Island sprite, restrained retro pixel art with visible pixel clusters, muted moss greens, warm parchment, walnut and sage, warm upper-left light, readable simple forms. No glossy painting, no 3D, no people, no text, letters, numbers, labels, buttons, or UI. Full opaque canvas; concentrate narrative details in left third."
+    },
+    {
+      "path": "public/assets/english-week1/festival-backdrop.png",
+      "prompt": "Create ONE 16:9 landscape game background for a Grade 6 English learning game. quiet evening poetry festival garden on a floating library island. On the LEFT a giant library tree with warm lit book alcoves, four simple hanging paper lanterns and a small manuscript lectern surrounded by pale flowers. RIGHT TWO THIRDS is an uncluttered dark desaturated sage-blue sky above a low grassy terrace, no large objects. Strict style: match supplied Reading Island sprite, restrained retro pixel art with visible pixel clusters, muted moss greens, warm parchment, walnut and sage, warm upper-left light, readable simple forms. No glossy painting, no 3D, no people, no text, letters, numbers, labels, buttons, or UI. Full opaque canvas; concentrate narrative details in left third."
+    },
+    {
+      "path": "public/assets/english-week1/word-lantern.png",
+      "prompt": "Create ONE transparent-background game prop for a Grade 6 English learning game. ONE isolated hanging brass-and-wood reading lantern with a large blank cream parchment panel in its center, a little handle at top, moss-green top cap, warm golden light visible behind glass. No lettering. Entire single object fully in frame, 12% transparent margin, centered square composition. Genuinely transparent background outside the lantern. Designed as a reusable game object behind one short word. Strict style: match supplied Reading Island sprite, restrained retro pixel art with visible pixel clusters, muted moss greens, warm parchment, walnut and sage, warm upper-left light, readable simple forms. No glossy painting, no 3D, no people, no text, letters, numbers, labels, buttons, or UI. Preserve actual alpha transparency."
+    }
+  ],
+  "audio": {
+    "manifest": "public/assets/english-week1/audio/manifest.json",
+    "generator": "scripts/generate-english-audio.ps1",
+    "voice": "Microsoft Zira Desktop (en-US), offline synthesized recordings",
+    "clips": 106
+  },
+  "gameScope": "Five English Q1 Week 1 games only; Math games remain planned."
+}

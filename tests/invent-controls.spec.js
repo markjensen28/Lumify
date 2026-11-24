@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { ready, clickGame, startFromMenu } from './helpers/intro.js';
+import { ready, clickGame, startFromMenu, selectIsland } from './helpers/intro.js';
 
 test('workshop drag, name, dropdowns and overlays preserve the invention', async ({ page }, testInfo) => {
   test.setTimeout(120_000);
@@ -8,8 +8,9 @@ test('workshop drag, name, dropdowns and overlays preserve the invention', async
   await page.goto('/?test=1');
   await ready(page, 'MenuScene');
   await startFromMenu(page);
-  await clickGame(page, 200, 515);
-  await clickGame(page, 200, 515);
+  await selectIsland(page, 'vulcan-caverns');
+  await clickGame(page, 640, 332);
+  await clickGame(page, 640, 332);
   await ready(page, 'IslandMapScene');
   await clickGame(page, 620, 524);
   await ready(page, 'QuarterDetailScene');

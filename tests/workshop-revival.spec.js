@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { mkdir, readFile } from 'node:fs/promises';
-import { clickGame, ready, startFromMenu } from './helpers/intro.js';
+import { clickGame, ready, startFromMenu, selectIsland } from './helpers/intro.js';
 test.use({ trace: 'off' });
 const state = page => page.evaluate(() => window.__TEST__.state());
 const workshop = async page => (await state(page)).science.state;
@@ -24,7 +24,8 @@ test('workshop recovers real supplies, carries three repairs, saves teacher-revi
   const dir = `screenshots/workshop-revival/${testInfo.project.name}`;
   await mkdir(dir, { recursive: true });
   await page.goto('/?test=1'); await ready(page, 'MenuScene'); await startFromMenu(page);
-  await clickGame(page, 200, 515); await ready(page, 'IslandMapScene');
+  await selectIsland(page, 'vulcan-caverns');
+  await clickGame(page, 640, 332); await ready(page, 'IslandMapScene');
   await clickGame(page, 620, 524); await ready(page, 'QuarterDetailScene');
   await page.evaluate(() => window.__TEST__.commands.setQuarterScrollY(1900));
   await clickGame(page, 460, 540);

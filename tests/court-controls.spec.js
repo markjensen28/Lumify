@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { ready, clickGame, startFromMenu } from './helpers/intro.js';
+import { ready, clickGame, startFromMenu, selectIsland } from './helpers/intro.js';
 
 test('court defense fields and overlays preserve the active case', async ({ page }, testInfo) => {
   test.setTimeout(120_000);
@@ -8,8 +8,9 @@ test('court defense fields and overlays preserve the active case', async ({ page
   await page.goto('/?test=1');
   await ready(page, 'MenuScene');
   await startFromMenu(page);
-  await clickGame(page, 200, 515);
-  await clickGame(page, 200, 515);
+  await selectIsland(page, 'vulcan-caverns');
+  await clickGame(page, 640, 332);
+  await clickGame(page, 640, 332);
   await ready(page, 'IslandMapScene');
   await clickGame(page, 620, 524);
   await ready(page, 'QuarterDetailScene');

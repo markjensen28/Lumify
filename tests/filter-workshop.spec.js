@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { mkdir } from 'node:fs/promises';
-import { clickGame, ready, startFromMenu } from './helpers/intro.js';
+import { clickGame, ready, startFromMenu, selectIsland } from './helpers/intro.js';
 
 test.use({ trace: 'off' });
 const state = page => page.evaluate(() => window.__TEST__.state());
@@ -28,7 +28,8 @@ test('Filter Forge assembles the apparatus and traces residue versus dissolved s
   const screenshots = `screenshots/filter-workshop/${testInfo.project.name}`;
   await mkdir(screenshots, { recursive: true });
   await page.goto('/?test=1'); await ready(page, 'MenuScene'); await startFromMenu(page);
-  await clickGame(page, 200, 515); await clickGame(page, 200, 515); await ready(page, 'IslandMapScene');
+  await selectIsland(page, 'vulcan-caverns');
+  await clickGame(page, 640, 332); await clickGame(page, 640, 332); await ready(page, 'IslandMapScene');
   await clickGame(page, 620, 524); await ready(page, 'QuarterDetailScene');
   await page.evaluate(() => window.__TEST__.commands.setQuarterScrollY(700));
   await clickGame(page, 490, 500); await clickGame(page, 535, 527); await ready(page, 'ScienceAdventureScene');

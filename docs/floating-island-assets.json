@@ -1,0 +1,73 @@
+﻿{
+  "generator": "Built-in image_gen",
+  "styleReference": "public/assets/islands/vulcan-caverns.png; user-provided old island-selection screenshot",
+  "assets": [
+    {
+      "id": "hibla-archipelago",
+      "path": "public/assets/floating-islands/hibla-archipelago.png",
+      "prompt": "Create ONE game asset: Hibla Archipelago, Filipino language subject, a single floating island on a genuinely transparent background. Use the supplied old Vulcan sprite ONLY as the strict pixel-art style reference: restrained muted earthy colors, visible crisp pixel clusters, simple readable forms, isometric view, light from upper left, tapered craggy rocky underside. This is a sibling asset from the same retro game, not a glossy detailed remaster. Island top has a small Filipino-inspired bamboo and timber storytelling pavilion, terracotta roof, woven textile banners, palm tree, a few stepping stones and a small open book on a lectern. Two small attached floating rock outcrops connected by short bamboo bridges. Compact recognizable silhouette, entire island fully in frame with 8% transparent margin, no water or ocean shoreline, no background, no glow, no text, no numbers, no lock, no UI. Square composition. This normal/unlocked master must also remain recognizable when darkened for a locked state."
+    },
+    {
+      "id": "hearthwork-terraces",
+      "path": "public/assets/floating-islands/hearthwork-terraces.png",
+      "prompt": "Edit this floating island asset. Remove the entire large volcano/mountain behind the workshop and windmill. Replace only that mountain with a low grassy hill and a small apple tree. This is Hearthwork Terraces for practical skills EPP, not a volcanic island. Preserve the timber workshop, tools, windmill, three vegetable terraces, spool and cloth, rocky floating underside, crisp pixel-art style, perspective and lighting. Preserve genuine transparent background. No additional objects, no text, no volcano, no lava."
+    },
+    {
+      "id": "tala-crossroad",
+      "path": "public/assets/floating-islands/tala-crossroad.png",
+      "prompt": "Create ONE transparent-background floating-island game asset: Tala Crossroad, Araling Panlipunan social studies subject. Small historic Philippine-inspired stone civic hall, crossroads of cobblestone paths, old map on a timber lectern, small compass rose in courtyard, heritage monument, modest tree. Warm sandstone and muted blue roof. Use supplied old Vulcan sprite as strict style reference, a sibling asset from same retro game. Crisp visible pixel clusters, restrained muted earthy palette, simple readable silhouette, isometric view, light upper left, tapered craggy rocky underside with soil strata. Entire island fully visible, 8% transparent margin, square composition. Keep buildings compact and large features readable at 250px wide. No text, no numbers, no lock, no UI, no water or ocean, no background, no glow, no glossy painting. Normal/unlocked master also recognizable when darkened."
+    },
+    {
+      "id": "concord-grove",
+      "path": "public/assets/floating-islands/concord-grove.png",
+      "prompt": "Create ONE transparent-background floating-island game asset: Concord Grove, Edukasyon sa Pagpapakatao values education subject. Broad leafy gathering tree, circular community garden, two benches facing a shared small table, two connected paths with a little bridge, modest community pavilion. Soft moss greens, warm earth and muted pink flowers. Use supplied old Vulcan sprite as strict style reference, a sibling asset from same retro game. Crisp visible pixel clusters, restrained muted earthy palette, simple readable silhouette, isometric view, light upper left, tapered craggy rocky underside with soil strata. Entire island fully visible, 8% transparent margin, square composition. Keep buildings compact and large features readable at 250px wide. No text, no numbers, no lock, no UI, no water or ocean, no background, no glow, no glossy painting. Normal/unlocked master also recognizable when darkened."
+    },
+    {
+      "id": "grand-library",
+      "path": "public/assets/floating-islands/grand-library.png",
+      "prompt": "Create ONE transparent-background floating-island game asset: Grand Library, central knowledge hub. A compact majestic old stone library with three readable peaked towers and warm lit windows, open book above doorway as carved emblem, little bookshelves outside and a single leafy tree, steps to entrance. Warm cream stone and weathered blue roofs, restrained gold details. Use supplied old Vulcan sprite as strict style reference, a sibling asset from same retro game. Crisp visible pixel clusters, restrained muted earthy palette, simple readable silhouette, isometric view, light upper left, tapered craggy rocky underside with soil strata. Entire island fully visible, 8% transparent margin, square composition. Keep buildings compact and large features readable at 250px wide. No text, no numbers, no lock, no UI, no water or ocean, no background, no glow, no glossy painting. Normal/unlocked master also recognizable when darkened."
+    },
+    {
+      "id": "floating-sky",
+      "path": "public/assets/backgrounds/floating-sky.png",
+      "prompt": "Create ONE wide 16:9 pixel-art sky background for a retro floating-island selection game. Quiet desaturated sage-teal sky, cream and blue-gray clouds drifting mostly along bottom third and far left/right edges, tiny distant cloud wisps. Large uncluttered open center occupying 70% of composition for separately rendered islands. Hand-placed chunky pixel clusters, restrained old 16-bit palette, warm upper-left daylight, no smooth digital painting. Horizon indistinct, sky only, no water, no ocean, no islands, no buildings, no text, no UI, no vignette, no sun disk. Reference mood: calm nostalgic sky above the clouds, readable backdrop rather than main artwork. Landscape 16:9."
+    },
+    {
+      "id": "floating-mist",
+      "path": "public/assets/backgrounds/floating-mist.png",
+      "prompt": "Create ONE reusable transparent-background pixel-art cloud asset for a calm retro floating-island game. A low horizontal bank of three overlapping puffy clouds, creamy ivory sunlit top, muted sage blue-gray shaded underside, restrained warm desaturated colors. Crisp large pixel clusters, same old 16-bit style as a nostalgic island selection screen. Wide low silhouette, roughly 4:1 aspect ratio inside a wide canvas with transparent margins, no sky, no ground, no water, no purple or lavender, no glow, no text, no UI. Genuine transparency outside cloud. Intended as subtle drifting foreground cloud and mist covering a locked floating island."
+    },
+    {
+      "id": "hibla-archipelago-map",
+      "path": "public/assets/island-maps/hibla-archipelago-map.png",
+      "prompt": "Create ONE wide 16:9 quarter-selection map backdrop for hibla-archipelago. Filipino language subject. Bamboo storytelling pavilion with terracotta roof, woven banners, a book lectern, palm trees, short bamboo bridges between grassy terraces, small village cottages. A close overhead-isometric view ON this island, an explorable environment not a small isolated sprite. Winding clear paths connect FOUR spacious empty clearings, roughly lower-left at (18%,78%), middle-left (38%,45%), lower-right (66%,68%), upper-right (85%,26%). These clearings must remain free of objects for UI quarter buttons, do not paint circles, buttons or labels. Reserve quiet top-left header area. Terrain fills the frame, with rocky island edge and distant muted clouds only near bottom corners. Restrained earthy retro pixel art, chunky visible pixel clusters, simple readable landmarks, warm light upper left, matching supplied island art when given. Full opaque background. No text, no characters, no UI, no numbers, no locks, no water or ocean, no glossy painting. Landscape 16:9."
+    },
+    {
+      "id": "hearthwork-terraces-map",
+      "path": "public/assets/island-maps/hearthwork-terraces-map.png",
+      "prompt": "Create ONE wide 16:9 quarter-selection map backdrop for hearthwork-terraces. EPP practical skills. Vegetable terraces, timber craft workshops, tools outside, modest windmill, planting beds, cloth drying rack, low grassy hills. No volcano or lava. A close overhead-isometric view ON this island, an explorable environment not a small isolated sprite. Winding clear paths connect FOUR spacious empty clearings, roughly lower-left at (18%,78%), middle-left (38%,45%), lower-right (66%,68%), upper-right (85%,26%). These clearings must remain free of objects for UI quarter buttons, do not paint circles, buttons or labels. Reserve quiet top-left header area. Terrain fills the frame, with rocky island edge and distant muted clouds only near bottom corners. Restrained earthy retro pixel art, chunky visible pixel clusters, simple readable landmarks, warm light upper left, matching supplied island art when given. Full opaque background. No text, no characters, no UI, no numbers, no locks, no water or ocean, no glossy painting. Landscape 16:9."
+    },
+    {
+      "id": "tala-crossroad-map",
+      "path": "public/assets/island-maps/tala-crossroad-map.png",
+      "prompt": "Create ONE wide 16:9 quarter-selection map backdrop for tala-crossroad. Araling Panlipunan social studies. Warm sandstone historic Philippine-inspired civic hall with muted blue roof, heritage monument, old map lectern, compass rose courtyard, community plazas and low stone walls. A close overhead-isometric view ON this island, an explorable environment not a small isolated sprite. Winding clear paths connect FOUR spacious empty clearings, roughly lower-left at (18%,78%), middle-left (38%,45%), lower-right (66%,68%), upper-right (85%,26%). These clearings must remain free of objects for UI quarter buttons, do not paint circles, buttons or labels. Reserve quiet top-left header area. Terrain fills the frame, with rocky island edge and distant muted clouds only near bottom corners. Restrained earthy retro pixel art, chunky visible pixel clusters, simple readable landmarks, warm light upper left, matching supplied island art when given. Full opaque background. No text, no characters, no UI, no numbers, no locks, no water or ocean, no glossy painting. Landscape 16:9."
+    },
+    {
+      "id": "concord-grove-map",
+      "path": "public/assets/island-maps/concord-grove-map.png",
+      "prompt": "Create ONE wide 16:9 quarter-selection map backdrop for concord-grove. Edukasyon sa Pagpapakatao values education. Large leafy gathering tree, community garden, shared tables and benches, modest timber pavilion, little cooperation bridges, pink flower beds. A close overhead-isometric view ON this island, an explorable environment not a small isolated sprite. Winding clear paths connect FOUR spacious empty clearings, roughly lower-left at (18%,78%), middle-left (38%,45%), lower-right (66%,68%), upper-right (85%,26%). These clearings must remain free of objects for UI quarter buttons, do not paint circles, buttons or labels. Reserve quiet top-left header area. Terrain fills the frame, with rocky island edge and distant muted clouds only near bottom corners. Restrained earthy retro pixel art, chunky visible pixel clusters, simple readable landmarks, warm light upper left, matching supplied island art when given. Full opaque background. No text, no characters, no UI, no numbers, no locks, no water or ocean, no glossy painting. Landscape 16:9."
+    }
+  ],
+  "reused": [
+    "public/assets/islands/vulcan-caverns.png",
+    "public/assets/islands/numeric-ruins.png",
+    "public/assets/islands/reading-island.png",
+    "public/assets/island-maps/vulcan-caverns-map.png",
+    "public/assets/island-maps/numeric-ruins-map.png",
+    "public/assets/island-maps/reading-island-map.png"
+  ],
+  "states": {
+    "normal": "Original transparent artwork, full color; default for the three existing subject islands.",
+    "locked": "Same artwork with ISLAND_STATES.locked tint, floating-mist overlay and a separate lock glyph. All eight islands support both states through registry islandUnlocks; five remain locked by default."
+  }
+}

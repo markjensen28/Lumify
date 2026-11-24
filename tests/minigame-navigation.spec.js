@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { ready, clickGame, startFromMenu } from './helpers/intro.js';
+import { ready, clickGame, startFromMenu, selectIsland } from './helpers/intro.js';
 
 test('five minigames share navigation positions and preserve play through help and settings', async ({ page }, testInfo) => {
   test.setTimeout(180_000);
@@ -9,8 +9,9 @@ test('five minigames share navigation positions and preserve play through help a
   await page.goto('/?test=1');
   await ready(page, 'MenuScene');
   await startFromMenu(page);
-  await clickGame(page, 200, 515);
-  await clickGame(page, 200, 515);
+  await selectIsland(page, 'vulcan-caverns');
+  await clickGame(page, 640, 332);
+  await clickGame(page, 640, 332);
   await ready(page, 'IslandMapScene');
   await clickGame(page, 620, 524);
   await ready(page, 'QuarterDetailScene');

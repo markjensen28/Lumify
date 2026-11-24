@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { startFromMenu } from './helpers/intro.js';
+import { selectIsland, startFromMenu } from './helpers/intro.js';
 
 test.setTimeout(240_000);
 
@@ -233,9 +233,9 @@ async function openQuarterOne(page) {
   await page.goto('/?test=1');
   await waitForReady(page, 'MenuScene');
   await startFromMenu(page);
-  await clickGame(page, 200, 515);
+  await selectIsland(page, 'vulcan-caverns');
   await expect.poll(async () => (await getState(page)).selectedIsland).toBe('vulcan-caverns');
-  await clickGame(page, 200, 515);
+  await clickGame(page, 640, 332);
   await waitForReady(page, 'IslandMapScene');
   await clickGame(page, 620, 524);
   await waitForReady(page, 'QuarterDetailScene');
@@ -416,25 +416,24 @@ test.describe('Lumi Adventures UI flow', () => {
     await startFromMenu(page);
     await expect.poll(() => canvasLooksNonBlank(page)).toBe(true);
 
-    for (let index = 0; index < 8; index += 1) {
-      await clickGame(page, 263, 143);
-    }
-    await expect.poll(async () => (await page.evaluate(() => window.__TEST__.state())).lockedFeedback).toBe('unknown');
+    await selectIsland(page, 'hibla-archipelago');
+    for (let index = 0; index < 8; index += 1) await clickGame(page, 640, 332);
+    await expect.poll(async () => (await page.evaluate(() => window.__TEST__.state())).lockedFeedback).toBe('hibla-archipelago');
     await expect.poll(async () => (await page.evaluate(() => window.__TEST__.state())).sceneKey).toBe('IslandSelectScene');
     await expect.poll(async () => {
       const state = await getState(page);
-      const lockedIsland = state.islandPositions.find((island) => island.id === 'unknown');
+      const lockedIsland = state.islandPositions.find((island) => island.id === 'hibla-archipelago');
       return lockedIsland?.x;
-    }).toBe(263);
+    }).toBe(640);
     await expect.poll(async () => {
       const state = await getState(page);
-      const lockedIsland = state.islandPositions.find((island) => island.id === 'unknown');
+      const lockedIsland = state.islandPositions.find((island) => island.id === 'hibla-archipelago');
       return lockedIsland?.y;
-    }).toBe(143);
+    }).toBeGreaterThan(320);
 
-    await clickGame(page, 200, 515);
+    await selectIsland(page, 'vulcan-caverns');
     await expect.poll(async () => (await getState(page)).selectedIsland).toBe('vulcan-caverns');
-    await clickGame(page, 200, 515);
+    await clickGame(page, 640, 332);
     await waitForReady(page, 'IslandMapScene');
     await expect.poll(() => canvasLooksNonBlank(page)).toBe(true);
     await expect.poll(async () => (await page.evaluate(() => window.__TEST__.state())).mapQuarterNodeCount).toBe(4);

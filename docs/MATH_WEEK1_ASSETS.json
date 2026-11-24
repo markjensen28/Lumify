@@ -1,0 +1,37 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-11-05",
+  "use": "Math Q1 Week 1 Numeric Ruins backdrops. Mathematical units and numeracy are rendered in code, not baked into scenery.",
+  "assets": [
+    {
+      "name": "bridgeworks",
+      "prompt": "Use case: stylized-concept. Asset type: opaque wide 16:9 pixel-art educational game backdrop for Lumora's Numeric Ruins floating island. Crisp deliberate square pixel clusters, classic 16-bit adventure scenery. Moss-green grassy ledges, warm sandstone ruins, vines, distant blue-gray mountains and white clouds below floating land. Warm upper-left sunlight. Composition: active environmental illustration in the LEFT THIRD; right two-thirds is a quiet lightly textured stone courtyard fading toward pale sky, reserved for a readable game workbench. No characters, no text, no numbers, no symbols, no UI, no watermark. A small stone bridge workshop at the edge of two floating grassy ledges, a gap with wooden guide rails, stacks of ochre and turquoise cut stone and a little winding path. Calm optimistic morning.",
+      "source": "C:\\Users\\rotse\\.codex\\generated_images\\01a1a764-56cc-7ca2-9a45-c5eb0515a608\\exec-888cc768-599c-420e-90da-4ef5d99896c0.png",
+      "path": "public/assets/math-week1/bridgeworks.png"
+    },
+    {
+      "name": "mosaic-courtyard",
+      "prompt": "Use case: stylized-concept. Asset type: opaque wide 16:9 pixel-art educational game backdrop for Lumora's Numeric Ruins floating island. Crisp deliberate square pixel clusters, classic 16-bit adventure scenery. Moss-green grassy ledges, warm sandstone ruins, vines, distant blue-gray mountains and white clouds below floating land. Warm upper-left sunlight. Composition: active environmental illustration in the LEFT THIRD; right two-thirds is a quiet lightly textured stone courtyard fading toward pale sky, reserved for a readable game workbench. No characters, no text, no numbers, no symbols, no UI, no watermark. An ancient open-air mosaic courtyard, low stone walls and an unfinished turquoise and ochre tiled floor on a floating grassy ledge. A few ceramic trays and loose square tiles at left, overgrown vine arches.",
+      "source": "C:\\Users\\rotse\\.codex\\generated_images\\01a1a764-56cc-7ca2-9a45-c5eb0515a608\\exec-80a8cbd2-3bf1-4d87-81cb-5069e42b22b6.png",
+      "path": "public/assets/math-week1/mosaic-courtyard.png"
+    },
+    {
+      "name": "whole-trade-depot",
+      "prompt": "Use case: stylized-concept. Asset type: opaque wide 16:9 pixel-art educational game backdrop for Lumora's Numeric Ruins floating island. Crisp deliberate square pixel clusters, classic 16-bit adventure scenery. Moss-green grassy ledges, warm sandstone ruins, vines, distant blue-gray mountains and white clouds below floating land. Warm upper-left sunlight. Composition: active environmental illustration in the LEFT THIRD; right two-thirds is a quiet lightly textured stone courtyard fading toward pale sky, reserved for a readable game workbench. No characters, no text, no numbers, no symbols, no UI, no watermark. A friendly ancient supply depot on a floating grassy island, sandstone arch, wooden winch and lift, neat whole wooden crates and small ochre cloth parcels, moss and vines. Depot fixtures at left.",
+      "source": "C:\\Users\\rotse\\.codex\\generated_images\\01a1a764-56cc-7ca2-9a45-c5eb0515a608\\exec-ac780484-3e57-45b4-990b-89afdcb85e08.png",
+      "path": "public/assets/math-week1/whole-trade-depot.png"
+    },
+    {
+      "name": "reservoir-rescue",
+      "prompt": "Use case: stylized-concept. Asset type: opaque wide 16:9 pixel-art educational game backdrop for Lumora's Numeric Ruins floating island. Crisp deliberate square pixel clusters, classic 16-bit adventure scenery. Moss-green grassy ledges, warm sandstone ruins, vines, distant blue-gray mountains and white clouds below floating land. Warm upper-left sunlight. Composition: active environmental illustration in the LEFT THIRD; right two-thirds is a quiet lightly textured stone courtyard fading toward pale sky, reserved for a readable game workbench. No characters, no text, no numbers, no symbols, no UI, no watermark. An ancient water reservoir on a floating sandstone island, clear teal water in stepped stone basins, stone aqueduct, brass sluice wheel and simple clay water jars at left, flowing water and lush moss.",
+      "source": "C:\\Users\\rotse\\.codex\\generated_images\\01a1a764-56cc-7ca2-9a45-c5eb0515a608\\exec-19134fc4-beff-4bc3-8460-30fe2618abd1.png",
+      "path": "public/assets/math-week1/reservoir-rescue.png"
+    },
+    {
+      "name": "caravan-planner",
+      "prompt": "Use case: stylized-concept. Asset type: opaque wide 16:9 pixel-art educational game backdrop for Lumora's Numeric Ruins floating island. Crisp deliberate square pixel clusters, classic 16-bit adventure scenery. Moss-green grassy ledges, warm sandstone ruins, vines, distant blue-gray mountains and white clouds below floating land. Warm upper-left sunlight. Composition: active environmental illustration in the LEFT THIRD; right two-thirds is a quiet lightly textured stone courtyard fading toward pale sky, reserved for a readable game workbench. No characters, no text, no numbers, no symbols, no UI, no watermark. A quiet caravan supply camp on a floating grassy island, ochre canvas awning and wooden supply wagon, rolled rope, clay water jars, winding stone path leading toward distant floating ruins. All objects concentrated left.",
+      "source": "C:\\Users\\rotse\\.codex\\generated_images\\01a1a764-56cc-7ca2-9a45-c5eb0515a608\\exec-ae8f7100-8571-46dd-af58-f24bc5012f3b.png",
+      "path": "public/assets/math-week1/caravan-planner.png"
+    }
+  ]
+}

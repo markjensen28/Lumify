@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { clickGame, ready, startFromMenu } from './helpers/intro.js';
+import { clickGame, ready, startFromMenu, selectIsland } from './helpers/intro.js';
 import { scienceQuarterGames, SERVICE_ROUNDS } from '../src/config/scienceQuarterGames.js';
 
 // This suite already captures each game and result explicitly. Recording every
@@ -85,7 +85,8 @@ test(`Science Q1 ${block} activities can be entered, explored, completed, and re
   page.on('pageerror', e => errors.push(e.message));
   page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
   await page.goto('/?test=1'); await ready(page, 'MenuScene'); await startFromMenu(page);
-  await clickGame(page, 200, 515); await clickGame(page, 200, 515); await ready(page, 'IslandMapScene');
+  await selectIsland(page, 'vulcan-caverns');
+  await clickGame(page, 640, 332); await clickGame(page, 640, 332); await ready(page, 'IslandMapScene');
   await clickGame(page, 620, 524); await ready(page, 'QuarterDetailScene');
   const points = [[520, 340], [650, 420], [490, 500], [610, 580], [460, 660], [760, 330], [640, 410], [790, 490], [670, 570], [820, 650]];
   for (const [index, game] of scienceQuarterGames.entries()) {
